@@ -21,5 +21,6 @@ jobs:
             github.projects.createCard({
             column_id: 19765321,
             content_id: context.payload.issue.id,
-            content_type: "Issue"
+            content_type: "Issue",
+            note: "Note added"
             });
