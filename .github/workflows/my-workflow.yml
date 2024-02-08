@@ -19,6 +19,9 @@ jobs:
               repo: context.repo.repo,
               body: "🎉 You've created this issue comment using GitHub Script!!!"
             })
+    
+      - name: Print labels
+        run: echo ${github.event.issue.labels}
 
       - name: Create card on project
         if: contains(github.event.issue.labels.*.name, 'bug')
